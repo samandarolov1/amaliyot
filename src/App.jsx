@@ -9,9 +9,9 @@ function App() {
   useEffect(() => {
     dispatch(salomDe())
   }, [])
+
   return (
     <>
-
     </>
   )
 }
