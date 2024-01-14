@@ -1,0 +1,143 @@
+.navbar1 {
+    box-sizing: content-box;
+    padding: 10px 0;
+}
+
+.navbar1 div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.df {
+    display: flex;
+    gap: 120px;
+}
+
+.df .phone {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.phone span {
+    color: #1A2338;
+    text-align: right;
+    font-family: Golos UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.location {
+    color: #1A2338;
+    font-family: Golos UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.df div:nth-child(1) span a {
+    font-size: 24px;
+}
+
+.df div:nth-child(1) {
+    display: flex;
+    gap: 15px;
+}
+
+
+/*  */
+
+.navbar2 {
+    background-color: #E4EEF3;
+    padding: 10px 0;
+}
+
+.navbar2 div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    border: 2px solid #07318b;
+    background-color: #07318b !important;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 35px;
+    background-color: #F4F8FA;
+}
+
+.search input {
+    background-color: #F4F8FA;
+    width: 720px;
+    border: none;
+    outline: none;
+    box-sizing: content-box;
+    padding-left: 30px;
+}
+
+.search:hover {
+    border: 2px solid #315BB3;
+    background-color: #315BB3 !important;
+}
+
+.search div {
+    width: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil {
+    display: flex;
+    gap: 30px;
+}
+
+.profil div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+}
+
+.profil div:hover {
+    transform: scale(1.01);
+}
+
+.profil div p {
+    color: var(--headings-color, #1A2338);
+    font-family: Golos UI;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar2 div div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.links {
+    width: 720px;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 40px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    color: var(--headings-color, #1A2338);
+    font-family: Golos UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
