@@ -1,19 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-let initialState = []
+
+
+
+const initialState = {
+    categoriesShow: [],
+    isloading: true
+}
 
 const MainSlice = createSlice({
     name: "mainSlice",
     initialState,
     reducers: {
-        salomDe: () => {
-            console.log("salom");
+        addCategory: (state, value) => {
+            state.categoriesShow = value.payload
+            state.isloading = false
         }
     }
 })
 
 export const {
-    salomDe
+    addCategory
 } = MainSlice.actions;
 
 export default MainSlice.reducer;

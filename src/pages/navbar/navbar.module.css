@@ -1,6 +1,12 @@
 .navbar1 {
     box-sizing: content-box;
     padding: 10px 0;
+    height: 20px;
+    background-color: #fff;
+}
+
+.navbar1, .navbar2{
+    z-index: 10000 !important;
 }
 
 .navbar1 div {
@@ -17,6 +23,11 @@
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+.logo {
+    width: 222px;
+    height: 78px;
 }
 
 .phone span {
@@ -102,12 +113,12 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    transition: all 0.5s ease-in;
+    transition: all 0.2s ease-in;
     cursor: pointer;
 }
 
 .profil div:hover {
-    transform: scale(1.01);
+    transform: scale(1.09);
 }
 
 .profil div p {
@@ -117,9 +128,14 @@
     font-weight: 500;
 }
 
+.profil div img {
+    width: 72px;
+    height: 32px;
+}
+
 .navbar2 div div:nth-child(2) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 12px;
 }
 
@@ -131,6 +147,10 @@
     gap: 40px;
 }
 
+.bars img {
+    display: none;
+}
+
 .links a {
     display: flex;
     align-items: center;
@@ -140,4 +160,181 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+}
+
+
+/* On screens that are 1296px or less*/
+
+@media screen and (max-width: 1296px) {
+    .df {
+        gap: 80px;
+    }
+
+    .df .phone {
+        gap: 20px;
+    }
+
+    .search {
+        height: 32px;
+    }
+
+    .search input {
+        width: 420px;
+        padding-left: 20px;
+    }
+
+    .search div {
+        width: 40px;
+    }
+
+    .links {
+        width: 450px;
+        gap: 14px;
+    }
+
+    .links a {
+        font-size: 13px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 71px;
+    }
+}
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) {
+    .df {
+        gap: 30px;
+    }
+
+    .phone a,
+    .location a {
+        font-size: 13px;
+    }
+
+    .df div:nth-child(1) span a {
+        font-size: 20px;
+    }
+
+
+    .df .phone {
+        gap: 15px;
+    }
+
+    .df div:nth-child(1) {
+        display: none;
+    }
+
+    .search {
+        height: 25px;
+    }
+
+    .search input {
+        width: 180px;
+    }
+
+    .search div {
+        width: 27px;
+    }
+
+    .search div img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .navbar2 div div:nth-child(2) {
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    .links {
+        width: auto;
+    }
+
+    .bars img {
+        display: block;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .logo {
+        width: 180px;
+        height: 67px;
+    }
+
+    .profil div p {
+        font-size: 13px;
+    }
+
+    .profil div img {
+        width: 52px;
+        height: 37px;
+    }
+
+}
+
+/* On screens that are 710px or less*/
+
+@media screen and (max-width: 710px) {
+    .navbar1 {
+        display: none;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    .navbar2 div div:nth-child(2) {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px) {
+    .profil div img {
+        width: 42px;
+        height: 30px;
+    }
+    .logo {
+        width: 130px;
+        height: 50px;
+    }
+
+    .profil div p {
+        font-size: 11px;
+    }
+    .profil  {
+        gap: 7px;
+    }
+    .profil div {
+        gap: 0 !important;
+    }
+    .navbar2 div div:nth-child(2) {
+        gap: 4px;
+    }
+    .search div img{
+        width: 13px;
+        height: 13px;
+    }
+    .search {
+        width: 25px;
+        height: 20px;
+    }
+    .bars {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+/* On screens that are 300px or less*/
+@media screen and (max-width: 300px) {
+    .logo {
+        width: 100px;
+        height: 33px;
+    }
 }

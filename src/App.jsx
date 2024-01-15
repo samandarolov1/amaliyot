@@ -1,7 +1,4 @@
-import { useDispatch } from 'react-redux'
 import './App.css'
-import { useEffect } from 'react'
-import { salomDe } from './redux/Slices/MainSlice'
 import Navbar from './pages/navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
@@ -16,13 +13,10 @@ import Basket from './pages/basket/Basket'
 
 function App() {
 
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(salomDe())
-  }, [])
 
   return (
     <>
+      <div className="specialNavDiv"></div>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />

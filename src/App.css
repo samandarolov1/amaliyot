@@ -1,5 +1,41 @@
 
 .active {
-    color: #634018 !important;
-    font-size: 19px !important;
+  color: #634018 !important;
+  font-size: 19px !important;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.specialNavDiv {
+  height: 150px;
+  width: 100%;
+}
+
+/* On screens that are 1296px or less*/
+
+@media screen and (max-width: 1296px) {
+  .active {
+    font-size: 14px !important;
   }
+}
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) {}
+
+/* On screens that are 710px or less*/
+@media screen and (max-width: 710px) {
+  .specialNavDiv {
+    height: 100px;
+  }
+}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px) {
+  body {
+    background-color: olive;
+  }
+}

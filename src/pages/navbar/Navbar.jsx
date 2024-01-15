@@ -5,8 +5,8 @@ import { FaInstagramSquare, FaWhatsappSquare, FaPhone } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
 export default function Navbar() {
     return (
-        <>
-            <nav className={style.navbar1}>
+        <nav>
+            <div className={style.navbar1}>
                 <div className="container">
                     <div className={style.location}><Link to={"contact"}><span><FaLocationDot /> </span> г. Королёв, Лесная 12, ТРЦ Вертикаль</Link></div>
                     <div className={style.df}>
@@ -22,17 +22,14 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-            </nav>
-            <nav className={style.navbar2}>
+            </div>
+            <div className={style.navbar2}>
                 <div className="container">
-                    <div><NavLink to={"/"}><img src="./public/logo.png" alt="" /></NavLink></div>
+                    <div><NavLink to={"/"}><img className={style.logo} src="/logo.png" alt="" /></NavLink></div>
                     <div>
-                        <label className={style.search}>
-                            <input type="text" />
-                            <div><img src="./public/search_icon.svg" alt="" /></div>
-                        </label>
+                        <div className={style.bars}><img src='katalog.svg' /></div>
                         <div className={style.links}>
-                            <NavLink to={"catalogs"}><img src='./public/katalog.svg' /> Каталог</NavLink>
+                            <NavLink to={"catalogs"}> Каталог</NavLink>
                             <NavLink to={"service"}>Услуги</NavLink>
                             <NavLink to={"delivery"}>Доставка и оплата</NavLink>
                             <NavLink to={"about"}>О нас</NavLink>
@@ -40,23 +37,27 @@ export default function Navbar() {
                             <NavLink to={"blog"}>Блог</NavLink>
                             <NavLink to={"contact"}>Контакты</NavLink>
                         </div>
+                        <label className={style.search}>
+                            <input type="text" />
+                            <div><img src="/search_icon.svg" alt="" /></div>
+                        </label>
                     </div>
                     <div className={style.profil}>
                         <div>
                             <NavLink>
-                                <img src="./public/user.svg" alt="" />
+                                <img src="/user.svg" alt="" />
                                 <p>Профиль</p>
                             </NavLink>
                         </div>
                         <div>
                             <NavLink to={"basket"}>
-                                <img src="./public/basket_icon.svg" alt="" />
+                                <img src="/basket_icon.svg" alt="" />
                                 <p>Корзина</p>
                             </NavLink>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </>
+            </div>
+        </nav>
     )
 }
