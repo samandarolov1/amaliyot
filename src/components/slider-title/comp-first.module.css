@@ -25,8 +25,8 @@
 
 .cardB {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
-    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -99,9 +99,87 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 21.6px */
+    line-height: 120%;
+    /* 21.6px */
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     padding: 9px 3px;
     cursor: pointer;
+}
+
+
+/* On screens that are 1296px or less*/
+@media screen and (max-width: 1296px) and (min-width: 992.001px) {
+
+    .card,
+    .card figure,
+    .card figure img {
+        width: 320px;
+    }
+
+}
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) and (min-width: 710.001px) {
+
+    .card,
+    .card figure,
+    .card figure img {
+        width: 345px;
+    }
+
+    .cardB {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* On screens that are 710px or less*/
+@media screen and (max-width: 710px) and (min-width: 470.001px) {
+    .cardB {
+        grid-template-columns: auto;
+    }
+
+    .card,
+    .card figure,
+    .card figure img {
+        width: 416px;
+    }
+}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px) and (min-width: 340.001px) {
+    .cardB {
+        grid-template-columns: auto;
+    }
+
+    .card,
+    .card figure,
+    .card figure img {
+        width: 330px;
+    }
+}
+
+/* On screens that are 340px or less*/
+@media screen and (max-width: 340px) {
+    .cardB {
+        grid-template-columns: auto;
+    }
+
+    .card,
+    .card figure,
+    .card figure img {
+        width: 238px;
+    }  
+    .card div p {
+        font-size: 16px;
+    }
+    .card div p:hover {
+        font-size: 16.1px;
+    }
+.card div div {
+font-size: 13px;
+}
+.card div div:hover {
+    font-size: 13.3px;
+    }
 }

@@ -12,3 +12,19 @@
   max-width: 1296px;
   margin: 0 auto;
 }
+
+
+/* On screens that are 1296px or less*/
+@media screen and (max-width: 1296px) and (min-width: 992.001px) {}
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) and (min-width: 710.001px) {}
+
+/* On screens that are 710px or less*/
+@media screen and (max-width: 710px)and (min-width: 470.001px) {}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px)and (min-width: 340.001px) {}
+
+/* On screens that are 340px or less*/
+@media screen and (max-width: 340px) {}

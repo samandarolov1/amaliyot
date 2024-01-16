@@ -3,7 +3,11 @@ import style from "./navbar.module.css"
 import { FaLocationDot, FaTelegram } from "react-icons/fa6";
 import { FaInstagramSquare, FaWhatsappSquare, FaPhone } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { showNavbar } from '../../redux/Slices/MainSlice';
 export default function Navbar() {
+    const dispatch = useDispatch()
+    const { navShow } = useSelector(state => state.main)
     return (
         <nav>
             <div className={style.navbar1}>
@@ -27,16 +31,36 @@ export default function Navbar() {
                 <div className="container">
                     <div><NavLink to={"/"}><img className={style.logo} src="/logo.png" alt="" /></NavLink></div>
                     <div>
-                        <div className={style.bars}><img src='katalog.svg' /></div>
-                        <div className={style.links}>
-                            <NavLink to={"catalogs"}> Каталог</NavLink>
-                            <NavLink to={"service"}>Услуги</NavLink>
-                            <NavLink to={"delivery"}>Доставка и оплата</NavLink>
-                            <NavLink to={"about"}>О нас</NavLink>
-                            <NavLink to={"discount"}>Акции</NavLink>
-                            <NavLink to={"blog"}>Блог</NavLink>
-                            <NavLink to={"contact"}>Контакты</NavLink>
-                        </div>
+                        <div className={style.bars} onClick={() => dispatch(showNavbar())}><img src='katalog.svg' /></div>
+                        {
+                            navShow ?
+                                <div className={style.showAll}>
+                                    <div className={style.navA}>
+                                        <div>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"/"}>дом</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"catalogs"}> Каталог</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"service"}>Услуги</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"delivery"}>Доставка и оплата</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"about"}>О нас</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"discount"}>Акции</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"blog"}>Блог</NavLink>
+                                            <NavLink onClick={() => dispatch(showNavbar())} to={"contact"}>Контакты</NavLink>
+
+                                        </div>
+                                    </div>
+                                    <div onClick={() => dispatch(showNavbar())} className={style.yopar}></div>
+                                </div>
+                                :
+                                <div className={style.links}>
+                                    <NavLink to={"catalogs"}> Каталог</NavLink>
+                                    <NavLink to={"service"}>Услуги</NavLink>
+                                    <NavLink to={"delivery"}>Доставка и оплата</NavLink>
+                                    <NavLink to={"about"}>О нас</NavLink>
+                                    <NavLink to={"discount"}>Акции</NavLink>
+                                    <NavLink to={"blog"}>Блог</NavLink>
+                                    <NavLink to={"contact"}>Контакты</NavLink>
+                                </div>
+                        }
                         <label className={style.search}>
                             <input type="text" />
                             <div><img src="/search_icon.svg" alt="" /></div>

@@ -1,0 +1,169 @@
+.cardlock {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+}
+
+.cardsR {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 306px;
+    position: relative;
+    margin-bottom: 60px;
+    z-index: -1;
+}
+
+.cardsR figure {
+    width: 306px;
+    height: 240px;
+    overflow: hidden;
+}
+
+.cardsR figure img {
+    width: 306px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.cardsR div {
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.cardsR div span {
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-family: Golos UI;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    background-color: #F84A8F;
+    border-radius: 5px;
+}
+
+.cardsR div p {
+    border-radius: 5px;
+    background: var(--Style, #3BB4BD);
+    color: #FFF;
+    font-family: Golos UI;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardsR p {
+    color: var(--descrp, #333);
+    font-family: Golos UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.cardsR b p {
+    color: var(--headings-color, #1A2338);
+    font-family: Golos UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    /* 19.2px */
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.cardsR b p:hover {
+    color: #1452D4;
+}
+
+.cardsR b span {
+    color: #999;
+    font-family: Golos UI;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+/* On screens that are 1296px or less*/
+@media screen and (max-width: 1296px) and (min-width: 992.001px) {
+    /* .cardlock {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    } */
+
+    .cardsR,
+    .cardsR figure,
+    .cardsR figure img {
+        width: 245px;
+    }
+}
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) and (min-width: 710.001px) {
+    .cardlock {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .cardsR,
+    .cardsR figure,
+    .cardsR figure img {
+        width: 230px;
+    }
+}
+
+/* On screens that are 710px or less*/
+@media screen and (max-width: 710px)and (min-width: 470.001px) {
+    .cardlock {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .cardsR,
+    .cardsR figure,
+    .cardsR figure img {
+        width: 230px;
+    }
+}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px)and (min-width: 340.001px) {
+    .cardlock {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .cardsR,
+    .cardsR figure,
+    .cardsR figure img {
+        width: 316px;
+    }
+}
+
+/* On screens that are 340px or less*/
+@media screen and (max-width: 340px) {
+    .cardlock {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .cardsR,
+    .cardsR figure,
+    .cardsR figure img {
+        width: 240px;
+    }
+}
