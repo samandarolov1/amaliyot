@@ -10,10 +10,25 @@ import Blog from './pages/blog/Blog'
 import Discount from './pages/discount/Discount'
 import Catalogs from './pages/catalogs/Catalogs'
 import Basket from './pages/basket/Basket'
+import FaultPage from './pages/fault page/FaultPage'
+import Footer from './pages/footer/Footer'
+import { useEffect } from 'react'
+import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { addCards, addCategory, addComforts } from './redux/Slices/MainSlice'
 
 function App() {
+const dispatch= useDispatch()
+  useEffect(() => {
+    axios.get("http://localhost:3000/categories")
+      .then(arr => dispatch(addCategory(arr.data.shows)))
 
+    axios.get("http://localhost:3000/homeCard")
+      .then(arr => dispatch(addCards(arr.data)))
 
+    axios.get("http://localhost:3000/comforts")
+      .then(arr => dispatch(addComforts(arr.data)))
+  }, [])
   return (
     <>
       <div className="specialNavDiv"></div>
@@ -28,7 +43,9 @@ function App() {
         <Route path='blog' element={<Blog />} />
         <Route path='discount' element={<Discount />} />
         <Route path='catalogs' element={<Catalogs />} />
+        <Route path='*' element={<FaultPage />} />
       </Routes>
+      <Footer />
     </>
   )
 }

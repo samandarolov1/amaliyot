@@ -1,0 +1,32 @@
+.unfound {
+    width: 620px;
+}
+
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) and (min-width: 710.001px) {
+    .unfound {
+        width: 520px;
+    }
+}
+
+/* On screens that are 710px or less*/
+@media screen and (max-width: 710px)and (min-width: 470.001px) {
+    .unfound {
+        width: 400px;
+    }
+}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px)and (min-width: 340.001px) {
+    .unfound {
+        width: 320px;
+    }
+}
+
+/* On screens that are 340px or less*/
+@media screen and (max-width: 340px) {
+    .unfound {
+        width: 220px;
+    }
+}

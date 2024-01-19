@@ -7,6 +7,7 @@ const initialState = {
     categoriesShow: [],
     homeCard: [],
     navShow: false,
+    comforts: [],
     isloading: true
 }
 
@@ -23,6 +24,9 @@ const MainSlice = createSlice({
         },
         showNavbar: (state) => {
             state.navShow = !state.navShow
+        },
+        addComforts: (state, value) => {
+            state.comforts = value.payload
         }
     }
 })
@@ -30,7 +34,8 @@ const MainSlice = createSlice({
 export const {
     addCategory,
     addCards,
-    showNavbar
+    showNavbar,
+    addComforts
 } = MainSlice.actions;
 
 export default MainSlice.reducer;

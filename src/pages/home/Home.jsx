@@ -4,21 +4,14 @@ import Title from '../../components/slider-title/Title'
 import CategoryCard from '../../components/slider-title/CategoryCard'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCards, addCategory } from '../../redux/Slices/MainSlice'
+import { addCards, addCategory, addComforts } from '../../redux/Slices/MainSlice'
 import CardsComp from '../../components/card-bla-bla/CardsComp'
-
+import Comforts from '../../components/card-bla-bla/Comforts'
+import style from "./home.module.css"
 
 
 export default function Home() {
-  const dispatch = useDispatch()
-  const { isloading, categoriesShow, homeCard } = useSelector(state => state.main)
-  useEffect(() => {
-    axios.get("http://localhost:3000/categories")
-      .then(arr => dispatch(addCategory(arr.data.shows)))
-
-    axios.get("http://localhost:3000/homeCard")
-      .then(arr => dispatch(addCards(arr.data)))
-  }, [])
+  const { isloading, categoriesShow, homeCard, comforts } = useSelector(state => state.main)
 
   return (
     isloading ? "" :
@@ -31,6 +24,8 @@ export default function Home() {
         <br /><br /><br />
         <CardsComp itemR={homeCard} toFilter={"shar"} />
         <br /><br /><br />
+        <div className={style.adds}><p>элитные шары</p> <span>со скидкой 50%</span></div>
+        <br /><br /><br />
         <Title text={"Бестселлеры"} />
         <br /><br /><br />
         <CardsComp itemR={homeCard} toFilter={"bestseller"} />
@@ -38,6 +33,10 @@ export default function Home() {
         <Title text={"Скидки недели"} />
         <br /><br /><br />
         <CardsComp itemR={homeCard} toFilter={"discount"} />
+        <br /><br /><br />
+        <Title text={"Как приобрести товары в нашем интернет-магазине"} />
+        <br /><br /><br />
+        <Comforts itemR={comforts} />
       </div>
   )
 }

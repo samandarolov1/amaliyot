@@ -135,6 +135,7 @@
         display: grid;
         grid-template-columns: auto auto;
     }
+
     .cardsR,
     .cardsR figure,
     .cardsR figure img {
@@ -148,6 +149,7 @@
         display: grid;
         grid-template-columns: auto;
     }
+
     .cardsR,
     .cardsR figure,
     .cardsR figure img {
@@ -161,9 +163,188 @@
         display: grid;
         grid-template-columns: auto;
     }
+
     .cardsR,
     .cardsR figure,
     .cardsR figure img {
         width: 240px;
     }
+}
+
+/* -------------------- */
+/* comforts */
+/* -------------------- */
+
+.comfBlock {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+
+.comforts figure {
+    width: 75.307px;
+    height: 59.632px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/raqam_saqla.svg");
+    color: #FFF;
+    text-align: center;
+    font-family: Akrobat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+}
+
+.comforts {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    width: 416px;
+}
+
+.comforts div {
+    width: 306px;
+}
+
+.comforts div p {
+    color: var(--headings-color, #1A2338);
+    font-family: Akrobat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 5px;
+    margin-top: 6px;
+    align-self: stretch;
+}
+
+.comforts div span {
+    margin-top: 10px;
+    color: var(--descrp, #333);
+    font-family: Golos UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+/* On screens that are 1296px or less*/
+@media screen and (max-width: 1296px) and (min-width: 992.001px) {
+    .comforts {
+        width: 330px;
+        gap: 12px;
+    }
+
+    .comforts div {
+        width: 236px;
+    }
+
+    .comforts div p {
+        font-family: 23px;
+    }
+
+    .comforts div span {
+        font-size: 15px;
+    }
+}
+
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) and (min-width: 710.001px) {
+    .comfBlock {
+        grid-template-columns: auto auto;
+    }
+
+    .comforts {
+        width: 340px;
+        gap: 18px;
+    }
+
+    .comforts div {
+        width: 236px;
+    }
+
+    .comforts div p {
+        font-family: 20px;
+    }
+
+    .comforts div span {
+        font-size: 14px;
+    }
+}
+
+/* On screens that are 710px or less*/
+@media screen and (max-width: 710px)and (min-width: 470.001px) {
+    .comfBlock {
+        grid-template-columns: auto;
+    }
+}
+
+/* On screens that are 470px or less*/
+@media screen and (max-width: 470px)and (min-width: 340.001px) {
+    .comfBlock {
+        grid-template-columns: auto;
+    }
+
+    .comforts {
+        margin-bottom: 30px;
+        width: 330px;
+        gap: 18px;
+    }
+
+    .comforts div {
+        width: 236px;
+    }
+
+    .comforts div p {
+        font-family: 20px;
+    }
+
+    .comforts div span {
+        font-size: 14px;
+    }
+}
+
+/* On screens that are 340px or less*/
+@media screen and (max-width: 340px) {
+    .comfBlock {
+        grid-template-columns: auto;
+    }
+
+    .comforts {
+        margin-bottom: 30px;
+        width: 230px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comforts div {
+        width: 236px;
+    }
+
+    .comforts div p {
+        font-family: 20px;
+    }
+
+    .comforts div span {
+        font-size: 14px;
+    }
+}
+
+
+.filter {
+    margin-top: 30px;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    padding: 10px 15px;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--bg-interface, #F3F4F6);
 }
