@@ -1,0 +1,53 @@
+.emptyBasket {
+    display: flex;
+    justify-content: center;
+    width: 920px;
+    gap: 50px;
+}
+
+.emptyBasket div h1 {
+    color: var(--headings-color, #1A2338);
+    font-family: Akrobat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+
+@media (max-width:950px) {
+    .emptyBasket div h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:710px) {
+    .emptyBasket div h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:540px) {
+    .emptyBasket {
+        display: block;
+        font-size: 20px;
+    }
+
+    .navbar__profile__letter {
+        display: none;
+    }
+
+    .navbar__profile {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:330px) {
+    .emptyBasket {
+        display: block;
+    }
+
+    .emptyBasket div img {
+        width: 100px;
+    }
+}

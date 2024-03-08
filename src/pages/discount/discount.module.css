@@ -1,0 +1,136 @@
+.aksiya__container h1{
+    color: var(--headings-color, #1A2338);
+    font-family: Akrobat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.aksiya1{
+    background-image: url('/discount1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 310px;
+}
+.aksiyas2{
+    display: flex;
+    gap: 100px;
+    margin-top: 40px;
+}
+.aksiyas21{
+    background-image:  url("/discount2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 590px;
+}
+.aksiyas22{
+    background-image:  url("/discount3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 590px;
+}
+.aksiyas21 h2{
+    color: #FFF;
+    font-family: Akrobat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    padding: 40px;
+}
+.aksiyas21 h2 span{
+    color: #CCA96D;
+    font-family: Akrobat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%; /* 46.8px */
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+}
+.aksiyas22 h3{
+    color: #FFF;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 130px 30px;
+}
+.aksiya1 h4{
+    margin-left: 650px;
+    padding-top: 30px;
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.aksiya3{
+    margin-top: 30px;
+    display: flex;
+    padding: 40px;
+    gap: 88px;
+    border-radius: 5px;
+    background: linear-gradient(280deg, #3BB4BD 1.66%, #3496A9 88.54%);
+}
+.aksiya31{
+    color: #FFF;
+    font-family: Akrobat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.aksiya31 span{
+    color: #FFF;
+    font-family: Akrobat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+}
+.emailing{
+    display: flex;
+    gap: 10px;
+}
+.aksiya32 div input{
+    padding: 8px 7px 8px 20px;
+    border-radius: 10px;
+    border: 2px solid #A8B7D7;
+    background: #FFF;
+}
+.aksiya32 button{
+    color: #FFF;
+    font-family: Golos UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+    padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--buttons-color, #315BB3);
+    cursor: pointer;
+}
+.aksiya32 button:hover{
+    background-color: #496ab2;
+    transition: all .1s ease;
+}
+.aksiya32 h6{
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}

@@ -8,6 +8,8 @@ const initialState = {
     homeCard: [],
     navShow: false,
     comforts: [],
+    toGift: {},
+    contactDatas: {},
     isloading: true
 }
 
@@ -27,6 +29,12 @@ const MainSlice = createSlice({
         },
         addComforts: (state, value) => {
             state.comforts = value.payload
+        },
+        addGiftHome: (state, value) => {
+            state.toGift = value.payload
+        },
+        getContactDatas: (state, value) => {
+            state.contactDatas = value.payload
         }
     }
 })
@@ -35,7 +43,9 @@ export const {
     addCategory,
     addCards,
     showNavbar,
-    addComforts
+    addComforts,
+    addGiftHome,
+    getContactDatas
 } = MainSlice.actions;
 
 export default MainSlice.reducer;

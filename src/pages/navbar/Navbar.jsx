@@ -2,12 +2,20 @@ import React from 'react'
 import style from "./navbar.module.css"
 import { FaLocationDot, FaTelegram } from "react-icons/fa6";
 import { FaInstagramSquare, FaWhatsappSquare, FaPhone } from "react-icons/fa";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { showNavbar } from '../../redux/Slices/MainSlice';
+import { doFilter } from '../../redux/Slices/FilterSlice';
 export default function Navbar() {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const { navShow } = useSelector(state => state.main)
+
+    function throwToSearch(e) {
+        navigate("catalogs")
+        dispatch(doFilter({ name: e.target.name, value: e.target.value }))
+    }
+
     return (
         <nav>
             <div className={style.navbar1}>
@@ -62,8 +70,8 @@ export default function Navbar() {
                                 </div>
                         }
                         <label className={style.search}>
-                            <input type="text" />
-                            <div><img src="/search_icon.svg" alt="" /></div>
+                            <input type="text" onChange={(e) => throwToSearch(e)} name='searchWord' />
+                            <div><img src="/search_icon.svg" alt=""/></div>
                         </label>
                     </div>
                     <div className={style.profil}>

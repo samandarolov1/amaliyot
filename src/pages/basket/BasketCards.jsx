@@ -1,13 +1,16 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { add, getLocalData } from "../../redux/Slices/BasketSlice"
+import { del, korAdd } from "../../redux/Slices/BasketSlice"
 
-export default function CardsComp({ itemR }) {
+export default function BasketCards({ itemR }) {
     const dispatch = useDispatch()
     const { storageData } = useSelector(state => state.basket)
-    async function addStorege(params) {
-        dispatch(add(params))
-        dispatch(getLocalData())
+    async function delStorege(params) {
+        dispatch(del(params))
+    }
+
+    async function needAdd(params) {
+        dispatch(korAdd(params))
     }
 
     return (
@@ -36,12 +39,12 @@ export default function CardsComp({ itemR }) {
                             </b>
                             {
                                 storageData.includes(item.id) ?
-                                    <div className='cardBtn'>
+                                    <div className='cardBtn' style={{ backgroundColor: "red" }} onClick={() => delStorege(item.id)}>
                                         <img src="basket_white.svg" alt="" />
-                                        <span>на корзине</span>
+                                        <span>Delete</span>
                                     </div>
                                     :
-                                    <div className='cardBtn' onClick={() => addStorege(item.id)}>
+                                    <div className='cardBtn' onClick={() => needAdd(item.id)}>
                                         <img src="basket_white.svg" alt="" />
                                         <span>В корзину</span>
                                     </div>

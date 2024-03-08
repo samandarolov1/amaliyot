@@ -1,0 +1,108 @@
+
+.oficces{
+    display: flex;
+}
+.oficcess__container h1{
+    color: var(--headings-color, #1A2338);
+    font-family: Akrobat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.oficces h2{
+    margin-bottom: 50px;
+    color: var(--headings-color, #1A2338);
+    font-family: Akrobat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.oficces p{
+    color: var(--Text, #1A1A1A);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+.oficces__card{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.of__card{
+    text-align: center;
+    width: 250px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    /* background-color: #315BB3; */
+    background: var(--bg-interface, #F3F4F6);
+}
+.of__card h3{
+    color: var(--headings-color, #1A2338);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+.zayavka{
+    padding: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    background: linear-gradient(280deg, #3BB4BD 1.66%, #3496A9 88.54%);
+}
+.zayavka h1 span{
+    color: #FFF;
+    font-family: Akrobat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.zayavka h1{
+    color: #FFF;
+    font-family: Akrobat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+.buttons input {
+    padding: 8px 7px 8px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #A8B7D7;
+    background: #FFF;
+}
+.buttons button {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--buttons-color, #315BB3);    
+}
+.buttons button:hover{
+    background-color: #496ab2;
+    transition: all .1s ease;
+}
+.zayavka small{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}

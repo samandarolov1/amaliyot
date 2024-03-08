@@ -20,7 +20,7 @@ export default function CategoryCard({ itemR }) {
                     return (
                         <div className={style.card} key={item.id}>
                             <figure>
-                                <img src="{item.img}" alt="" />
+                                <img src={item.img} alt="" />
                             </figure>
                             <div>
                                 <p>{item.mainTitle}</p>

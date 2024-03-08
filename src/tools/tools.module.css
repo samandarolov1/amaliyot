@@ -5,3 +5,9 @@
 .block figure img {
     width: 100%;
 }
+
+@media screen and (max-width: 590px) {
+ .block {
+    display: none;
+ }   
+}

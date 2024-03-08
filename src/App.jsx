@@ -15,10 +15,10 @@ import Footer from './pages/footer/Footer'
 import { useEffect } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { addCards, addCategory, addComforts } from './redux/Slices/MainSlice'
+import { addCards, addCategory, addComforts, addGiftHome } from './redux/Slices/MainSlice'
 
 function App() {
-const dispatch= useDispatch()
+  const dispatch = useDispatch()
   useEffect(() => {
     axios.get("http://localhost:3000/categories")
       .then(arr => dispatch(addCategory(arr.data.shows)))
@@ -28,6 +28,9 @@ const dispatch= useDispatch()
 
     axios.get("http://localhost:3000/comforts")
       .then(arr => dispatch(addComforts(arr.data)))
+
+    axios.get("http://localhost:3000/toGift")
+      .then(arr => dispatch(addGiftHome(arr.data)))
   }, [])
   return (
     <>
