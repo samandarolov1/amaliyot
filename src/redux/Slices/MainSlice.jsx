@@ -7,6 +7,7 @@ const initialState = {
     categoriesShow: [],
     homeCard: [],
     navShow: false,
+    inputShow: false,
     comforts: [],
     toGift: {},
     contactDatas: {},
@@ -39,6 +40,9 @@ const MainSlice = createSlice({
         },
         addBlogC: (state, action) => {
             state.blogC = action.payload
+        },
+        showInput: (state) => {
+            state.inputShow = !state.inputShow
         }
     }
 })
@@ -50,6 +54,7 @@ export const {
     addComforts,
     addGiftHome,
     getContactDatas,
+    showInput,
     addBlogC
 } = MainSlice.actions;
 

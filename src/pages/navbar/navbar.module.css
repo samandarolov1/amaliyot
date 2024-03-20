@@ -336,6 +336,11 @@
 
     .search input {
         display: none;
+        width: 300px;
+        height: 25px;
+    }
+    .search{
+        height: 28px;
     }
 
     .navbar2 div div:nth-child(2) {
@@ -377,8 +382,8 @@
     }
 
     .search {
-        width: 25px;
-        height: 20px;
+        max-width: 220px;
+        height: 25px;
     }
 
     .bars {

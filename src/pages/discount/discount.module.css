@@ -134,3 +134,260 @@
     font-style: normal;
     font-weight: 400;
 }
+@media (max-width: 1350px){
+    .aksiya1 h4{
+        font-size: 40px;
+    }
+}
+@media (max-width: 1224px){
+    .aksiya1 h4{
+        font-size: 35px;
+    }
+}
+@media (max-width: 1162px){
+    .aksiya1 h4{
+        font-size: 30px;
+    }
+}
+@media (max-width: 1098px){
+    .aksiya1 h4{
+        margin-left: 150px;
+        font-size: 30px;
+    }
+   
+}
+@media (max-width: 931px){
+    .aksiya1 h4{
+        margin-left: 150px;
+        font-size: 30px;
+    }
+    .aksiyas22 h3{
+        color: #FFF;
+        font-size: 36px;
+        padding: 40px 30px;
+    }
+    .aksiyas21 h2 span{
+        color: #CCA96D;
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 912px){
+    .aksiya32 div{
+        display: block;
+    }
+    .emailing button{
+        margin-top: 10px;
+    }
+   
+}
+@media (max-width: 737px){
+    .aksiya3{
+        gap: 10px;
+    }
+}
+@media (max-width: 690px){
+    .aksiyas2{
+        display: block;
+    }
+    .aksiyas21{
+        width: 500px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22{
+        width: 500px;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 660px){
+    .aksiya3{
+        gap: 10px;
+        background-color: #2B3B5E;
+    }
+    .aksiya31{
+        font-size: 30px;
+    }
+    .aksiya31 span{
+        font-size: 30px;
+    }
+   
+}
+@media (max-width: 608px){
+    .aksiya31{
+        font-size: 20px;
+    }
+    .aksiya31 span{
+        font-size: 20px;
+    }
+   
+}
+@media (max-width: 570px){
+    .aksiyas21{
+        width: 400px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22{
+        width: 400px;
+        margin-bottom: 25px;
+    }
+   
+}
+@media (max-width: 517px){
+    .aksiya3{
+        display: block;
+    }
+   
+}
+@media (max-width: 478px){
+    .aksiyas21{
+        width: 300px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22{
+        width: 300px;
+        margin-bottom: 25px;
+    }
+    .aksiya1 h4{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .aksiya3{
+        margin-top: 30px;
+        padding: 10px;
+     }
+}
+@media (max-width: 363px){
+    .aksiyas21{
+        width: 260px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22{
+        width: 260px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22 h3{
+        color: #FFF;
+        font-size: 30px;
+        padding: 40px 30px;
+    }
+    .aksiyas21 h2 span{
+        color: #CCA96D;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    .aksiya3{
+        margin-top: 30px;
+        padding: 10px;
+     }
+}
+@media (max-width: 292px){
+    .aksiyas21{
+        width: 220px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22{
+        width: 220px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22 h3{
+        color: #FFF;
+        font-size: 30px;
+        padding: 40px 30px;
+    }
+    .aksiyas21 h2 span{
+        color: #CCA96D;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    .aksiya3{
+        margin-top: 30px;
+        padding: 10px;
+     }
+     .aksiyas22 h3{
+        color: #FFF;
+        font-size: 24px;
+        padding: 40px 30px;
+    }
+    .aksiyas21 h2 span{
+        color: #CCA96D;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    .aksiyas21 h2{
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 263px){
+    .aksiyas21{
+        padding: 0px;
+        width: 170px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22{
+        padding: 0px;
+        width: 170px;
+        margin-bottom: 25px;
+    }
+    .aksiyas22 h3{
+        color: #FFF;
+        font-size: 30px;
+        padding: 40px 30px;
+    }
+    .aksiyas21 h2 span{
+        color: #CCA96D;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    .aksiya3{
+        margin-top: 30px;
+        padding: 10px;
+     }
+     .aksiyas22 h3{
+        color: #FFF;
+        font-size: 24px;
+        padding: 10px;
+    }
+    .aksiyas21 h2 span{
+        color: #CCA96D;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    .aksiyas21 h2{
+        padding: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 257px){  
+    .aksiya32 div input{
+        padding: 8px 7px 8px 6px;
+        border-radius: 10px;
+        border: 2px solid #A8B7D7;
+        background: #FFF;
+    }
+    .aksiya32 button{
+        font-size: 17px;
+        padding: 15px 25px;
+    }
+}
+@media (max-width: 257px){  
+    .aksiya32 div input{
+        width: 110px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 2px solid #A8B7D7;
+        background: #FFF;
+    }
+    .aksiya32 button{
+        font-size: 17px;
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+    .aksiya31{
+        font-size: 16px;
+    }
+    .aksiya31 span{
+        font-size: 16px;
+    }
+}
