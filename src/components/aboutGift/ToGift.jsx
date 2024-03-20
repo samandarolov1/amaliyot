@@ -5,7 +5,7 @@ export default function ToGift() {
     const { toGift } = useSelector(state => state.main)
 
     return (
-        <div className='help__container'>
+        <div className={style.help__container}>
             <h1>{toGift?.title}</h1>
             <br /><br /><br />
             <div className="helps">

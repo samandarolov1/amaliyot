@@ -10,7 +10,8 @@ const initialState = {
     comforts: [],
     toGift: {},
     contactDatas: {},
-    isloading: true
+    isloading: true,
+    blogC: []
 }
 
 const MainSlice = createSlice({
@@ -35,6 +36,9 @@ const MainSlice = createSlice({
         },
         getContactDatas: (state, value) => {
             state.contactDatas = value.payload
+        },
+        addBlogC: (state, action) => {
+            state.blogC = action.payload
         }
     }
 })
@@ -45,7 +49,8 @@ export const {
     showNavbar,
     addComforts,
     addGiftHome,
-    getContactDatas
+    getContactDatas,
+    addBlogC
 } = MainSlice.actions;
 
 export default MainSlice.reducer;
