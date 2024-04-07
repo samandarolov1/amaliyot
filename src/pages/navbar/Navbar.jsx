@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import style from "./navbar.module.css"
 import { FaLocationDot, FaTelegram } from "react-icons/fa6";
 import { FaInstagramSquare, FaWhatsappSquare, FaPhone } from "react-icons/fa";
