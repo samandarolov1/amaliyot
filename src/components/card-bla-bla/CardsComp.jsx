@@ -1,14 +1,12 @@
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { add, getLocalData } from "../../redux/Slices/BasketSlice"
+import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
 export default function CardsComp({ itemR }) {
-    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     const { storageData } = useSelector(state => state.basket)
-    async function addStorege(params) {
-        dispatch(add(params))
-        dispatch(getLocalData())
-    }
+
 
     return (
         <div className="cardlock">
@@ -17,7 +15,7 @@ export default function CardsComp({ itemR }) {
                     .map(item => (
                         <div className="cardsR" key={item.id}>
                             <figure>
-                                <img src={item.img} alt="" />
+                                <img src={item.img} alt="img" />
                             </figure>
                             <div className="cardNews">
                                 {
@@ -32,18 +30,20 @@ export default function CardsComp({ itemR }) {
                             <p>{item.price} {item.moneyType}</p>
                             <b style={{ cursor: "pointer" }}>
                                 <p>{item.name}</p>
-                                <span>{item.artickul.name}  {item.artickul.type} </span>
+                                <span>артикул  {item.id} </span>
                             </b>
                             {
-                                storageData.includes(item.id) ?
-                                    <div className='cardBtn'>
-                                        <img src="basket_white.svg" alt="" />
-                                        <span>на корзине</span>
+                                storageData.some(i => i.id === item.id) ?
+                                    <div className="cardBTN_container">
+                                        <div className='cardBtn' style={{ backgroundColor: "#2DAFB9" }} onClick={() => navigate("/basket")}>
+                                            <img src="basket_white.svg" alt="" />
+                                            <span>на корзине</span>
+                                        </div>
                                     </div>
                                     :
-                                    <div className='cardBtn' onClick={() => addStorege(item.id)}>
+                                    <div className='cardBtn' onClick={() => navigate(`/catalogs/cards/${item.id}`)}>
                                         <img src="basket_white.svg" alt="" />
-                                        <span>В корзину</span>
+                                        <span>посмотреть</span>
                                     </div>
                             }
                         </div>

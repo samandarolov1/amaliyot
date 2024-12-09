@@ -1,8 +1,3 @@
-.active {
-  color: #634018 !important;
-  font-size: 19px !important;
-}
-
 nav {
   position: fixed;
   top: 0;
@@ -11,7 +6,7 @@ nav {
 }
 
 .specialNavDiv {
-  height: 150px;
+  height: 130px;
   width: 100%;
 }
 
@@ -20,7 +15,10 @@ nav {
   height: 21px;
   cursor: pointer;
 }
-
+.cardBTN_container{
+  display: flex;
+  gap: 6px;
+}
 .cardBtn {
   display: flex;
   padding: 10px 20px 10px 12px;
@@ -49,6 +47,20 @@ nav {
   cursor: pointer;
 }
 
+.specialBody{
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.active {
+  color: #ac5e06 !important;
+  text-decoration: underline;
+}
+
 
 /* On screens that are 1296px or less*/
 
@@ -59,20 +71,37 @@ nav {
 }
 
 /* On screens that are 992px or less*/
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+  .specialBody{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
 
 /* On screens that are 710px or less*/
 @media screen and (max-width: 710px) {
   .specialNavDiv {
-    height: 100px;
+    height: 90px;
+  }
+  .specialBody{
+    padding-top: 5px;
+    padding-bottom: 20px;
   }
 }
 
 /* On screens that are 470px or less*/
-@media screen and (max-width: 470px) {}
+@media screen and (max-width: 470px) {
+  .specialNavDiv {
+    height: 73px;
+  }
+}
 
 /* On screens that are 340px or less*/
-@media screen and (max-width: 340px) {}
+@media screen and (max-width: 340px) {
+  .specialNavDiv {
+    height: 50px;
+  }
+}
 
 
 .cardlock {
@@ -248,4 +277,45 @@ nav {
   .cardsR figure img {
       width: 240px;
   }
+}
+
+
+
+
+.product_count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_count span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 54px;
+  padding: 10px 15px;
+  border: 2px solid #DCE2EF;
+  font-size: 22px;
+}
+
+.product_count button {
+  background-color: #DCE2EF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 54px;
+  font-size: 25px;
+}
+
+.product_count button:nth-child(1) {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.product_count button:nth-child(3) {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

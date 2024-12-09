@@ -4,10 +4,13 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { FaTelegram } from "react-icons/fa";
 import style from "./footer.module.css"
+import { useSelector } from 'react-redux';
 export default function Footer() {
+  const { currentTheme } = useSelector(state => state.theme)
+
     return (
-        <footer className={style.tagFooter}>
-            <div className={style.footer}>
+        <footer className={style.tagFooter}  >
+            <div className={style.footer} style={{background: currentTheme?.footer?.backColor}}>
                 <div className="container">
                     <div className={style.footer__nav}>
                         <ul>

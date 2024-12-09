@@ -1,9 +1,14 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { del, korAdd } from "../../redux/Slices/BasketSlice"
+import { del, korAdd, minus, plusCount } from "../../redux/Slices/BasketSlice"
+import { FaTrashAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { HiMiniMinus, HiMiniPlus } from "react-icons/hi2";
 
 export default function BasketCards({ itemR }) {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     const { storageData } = useSelector(state => state.basket)
     async function delStorege(params) {
         dispatch(del(params))
@@ -35,17 +40,28 @@ export default function BasketCards({ itemR }) {
                             <p>{item.price} {item.moneyType}</p>
                             <b style={{ cursor: "pointer" }}>
                                 <p>{item.name}</p>
-                                <span>{item.artickul.name}  {item.artickul.type} </span>
+                                <span>артикул  {item.id} </span>
                             </b>
+                            <div className="product_count">
+                            <button disabled={storageData.find(i => i.id === item?.id ).count > 1 ? false : true} onClick={() => dispatch(minus({ id: item.id }))}><HiMiniMinus /></button>
+                            <span>{storageData.map(i => i.id === item.id ? i.count : "")}</span>
+                            <button disabled={storageData.find(i => i.id === item?.id ).count < item.inStock ? false : true} onClick={() => dispatch(plusCount({ id: item.id, max: item.inStock }))}><HiMiniPlus /></button>
+                          </div>
                             {
-                                storageData.includes(item.id) ?
-                                    <div className='cardBtn' style={{ backgroundColor: "red" }} onClick={() => delStorege(item.id)}>
-                                        <img src="basket_white.svg" alt="" />
-                                        <span>Delete</span>
+                                storageData.some(i => i.id === item.id) ?
+                                    <div className="cardBTN_container">
+                                        <div className='cardBtn' onClick={() => navigate(`/catalogs/cards/${item.id}`)}>
+                                            <img src="/public/basket_white.svg" alt="" />
+                                            <span>посмотреть</span>
+                                        </div>
+                                        <div className='cardBtn' style={{ backgroundColor: "red" }} onClick={() => delStorege(item.id)}>
+                                            <span><FaTrashAlt /></span>
+                                            <span>Delete</span>
+                                        </div>
                                     </div>
                                     :
-                                    <div className='cardBtn' onClick={() => needAdd(item.id)}>
-                                        <img src="basket_white.svg" alt="" />
+                                    <div className='cardBtn' onClick={() => needAdd(item)}>
+                                        <img src="/public/basket_white.svg" alt="" />
                                         <span>В корзину</span>
                                     </div>
                             }

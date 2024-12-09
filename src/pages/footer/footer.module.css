@@ -1,14 +1,10 @@
 .tagFooter {
     width: 100%;
-    position: sticky;
-    /* bottom: 0; */
-    z-index: -1;
 }
 
 .footer {
     background: #263454;
     color: white;
-    margin-top: 40px;
     padding-top: 70px;
 }
 

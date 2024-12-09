@@ -1,0 +1,271 @@
+.showing_data {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.showing_data span:nth-child(2) {
+    font-size: 27px;
+}
+
+.showing_data span:nth-child(1) button,
+.showing_data span:nth-child(3) button {
+    font-family: Golos UI;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    text-align: left;
+    max-width: 300px;
+    height: 30px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.splitedCard1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.splited1 {
+    width: 650px;
+    height: 509px;
+    gap: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.splited2 {
+    width: 610px;
+}
+
+
+.allImgs {
+    display: flex;
+    flex-direction: column;
+    height: 509px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 3px;
+}
+
+.allImgs div {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    object-fit: cover;
+    box-shadow: 0 2px 1px rgba(255, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09), 0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09), 0 32px 16px rgba(0, 0, 0, 0.09);
+}
+
+.allImgs div video {
+    width: 88px;
+    height: 88px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.allImgs div span {
+    position: absolute;
+    top: 25px;
+    left: 24px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allImgs div img {
+    width: 86px;
+    height: 86px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.allImgs p {
+    width: 86px;
+    height: 86px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: small;
+}
+
+.allImgs div:hover {
+    transform: scale(1.05)
+}
+
+.allImgs div img:hover {
+    transform: scale(1.02)
+}
+
+.showingImg {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09), 0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09), 0 32px 16px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 549px;  
+    position: relative;
+    border-radius: 25px;
+}
+
+.showingImg img,
+.showingImg video {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.changeImg {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 25px 25px;
+    height: 46px;
+}
+
+.changeImg button {
+    border: none;
+    font-size: 40px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.aware_of {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.aware_of div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.aware_of span,
+.aware_of p,
+.id_key {
+    height: 31px;
+    padding: 5px 13px;
+    border-radius: 11px;
+    font-family: Golos UI;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.8px;
+    text-align: center;
+    align-items: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+}
+
+.id_key {
+    color: black;
+}
+
+.aware_of span {
+    background-color: #F84A8F;
+}
+
+.aware_of p {
+    background-color: #3BB4BD;
+}
+
+.title {
+    font-family: Akrobat;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.8px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.information_card {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: Golos UI;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.counting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counting p {
+    font-family: Golos UI;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #1A2338;
+}
+
+.product_count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_count span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 54px;
+    padding: 10px 15px;
+    border: 2px solid #DCE2EF;
+    font-size: 22px;
+}
+
+.product_count button {
+    background-color: #DCE2EF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 54px;
+    font-size: 25px;
+}
+
+.product_count button:nth-child(1) {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.product_count button:nth-child(3) {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
